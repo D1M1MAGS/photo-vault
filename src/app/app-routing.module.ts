@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
   },
   {
     path: 'list',
@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'add',
+    loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
+  },
+  {
+    path: 'folders',
+    loadChildren: () => import('./folders/folders.module').then( m => m.FoldersPageModule)
   }
 ];
 

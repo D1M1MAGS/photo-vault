@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   public appPages = [
-    {
+    /*{
       title: 'Home',
       url: '/home',
       icon: 'home'
@@ -22,11 +22,16 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },*/
+    {
+      title: 'Add',
+      url: '/add',
+      icon: 'add-circle'
     }
   ];
 
   user:any;
-  
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -48,8 +53,8 @@ export class AppComponent {
     this.afAuth.authState.subscribe((user)=> {
       if( user ) {
         this.appPages = [
-          {title: 'Notes', url: '/notes ', icon: 'copy'},
-          {title: 'Settings', url: '/settings ', icon: 'settings'}
+          {title: 'Add', url: '/add', icon: 'add-circle'}
+          /*{title: 'Settings', url: '/settings ', icon: 'settings'}*/
       ]
       this.user = user;
       }
