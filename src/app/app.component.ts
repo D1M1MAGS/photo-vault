@@ -24,9 +24,9 @@ export class AppComponent {
       icon: 'list'
     },*/
     {
-      title: 'Add',
-      url: '/add',
-      icon: 'add-circle'
+      title: 'Folders',
+      url: '/folders',
+      icon: 'folder-open'
     }
   ];
 
@@ -53,7 +53,7 @@ export class AppComponent {
     this.afAuth.authState.subscribe((user)=> {
       if( user ) {
         this.appPages = [
-          {title: 'Add', url: '/add', icon: 'add-circle'}
+          {title: 'Folders', url: '/folders', icon: 'folder-open'}
           /*{title: 'Settings', url: '/settings ', icon: 'settings'}*/
       ]
       this.user = user;
