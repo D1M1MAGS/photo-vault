@@ -1,5 +1,7 @@
 {
   "name": "photo-vault",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

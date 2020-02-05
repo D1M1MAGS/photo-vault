@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ModalController, AlertController } from '@ionic/angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { DataService } from '../data.service';
+import { PictureService } from '../picture.service';
 
 @Component({
   selector: 'app-folder-detail',
@@ -21,7 +22,8 @@ export class FolderDetailPage implements OnInit {
     private modal: ModalController, 
     private formBuilder: FormBuilder, 
     private data: DataService,
-    private alert: AlertController 
+    private alert: AlertController,
+    private picture: PictureService
   ) {}
 
   ngOnInit() {
@@ -51,10 +53,6 @@ export class FolderDetailPage implements OnInit {
     this.modal.dismiss();
   }
 
-  uploadImages(){
-
-  }
-
   async showDeleteAlert( name ) {
     const confirm = await this.alert.create({
       header: 'Confirm',
@@ -79,4 +77,9 @@ export class FolderDetailPage implements OnInit {
     });
     await confirm.present();
   }
+
+  takePhoto(){
+    this.picture.takePicture();
+  }
+
 }

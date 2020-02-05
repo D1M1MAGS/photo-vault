@@ -8,7 +8,7 @@
     <!--<ion-searchbar color="tertiary" (ionInput)="filterNotes( $event)" (ionCancel)="restoreNotes()" debounce="1000" placeholder="Search folders"> </ion-searchbar>-->
   </ion-header>
   
-  <ion-content>
+  <ion-content color = "warning">
 
     <!--<ion-fab vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button color="tertiary" (click)="addNote()">
@@ -18,7 +18,7 @@
 
     <ion-grid>
       <ion-row>
-        <ion-col size="6" *ngFor="let folder of folders" (click)="getFolderDetail(folder)">
+        <ion-col size="12" *ngFor="let folder of folders" (click)="getFolderDetail(folder)">
           <ion-card color="light">
             <ion-card-header>
               <ion-card-title> {{folder.name}} </ion-card-title>
@@ -30,8 +30,8 @@
       </ion-row>
     </ion-grid>
   
-    <ion-fab vertical="bottom" horizontal="end">
-      <ion-fab-button color = "tertiary" (click)="addFolder()">
+    <ion-fab vertical="bottom" horizontal="end" slot = "fixed">
+      <ion-fab-button  color = "light" (click)="addFolder()">
         <ion-icon name="add"> </ion-icon>
       </ion-fab-button>
     </ion-fab>

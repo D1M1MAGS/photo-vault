@@ -71,7 +71,7 @@ export class AppComponent {
     this.afAuth.auth.signOut().then(()=>{
       //redirect user to sign in page
       this.router.navigate(['/signin'])
-    })
+    });
   }
 
 }

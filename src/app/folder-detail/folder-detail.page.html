@@ -20,6 +20,13 @@
     <ion-button type="submit" *ngIf="edited" color="success" expand="block" (click)="save()">
       Save Changes
     </ion-button>
+
+    <!--<ion-fab vertical=" bottom " horizontal="end" slot="fixed">
+        <ion-fab-button color="tertiary" (click)="takePhoto()">
+          <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>-->
+
   </form>
 </ion-content>
 
@@ -30,12 +37,13 @@
     </ion-buttons>
 
     <ion-buttons slot="end">
-        <ion-button color="primary" (click)="uploadImages"> Upload </ion-button>
-      </ion-buttons>
+        <ion-button color="primary" (click)="takePhoto()"> Upload / Import </ion-button>
+    </ion-buttons>
 
     <ion-buttons slot="end">
-        <ion-button (click)="close()"> Close </ion-button>
+        <ion-button color = "warning" (click)="close()"> Close </ion-button>
       </ion-buttons>
 
   </ion-toolbar>
+
 </ion-footer>

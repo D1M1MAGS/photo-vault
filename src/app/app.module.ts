@@ -19,6 +19,7 @@ import { FolderDetailPageModule } from './folder-detail/folder-detail.module';
 
 // camera 
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +31,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
     AngularFireModule.initializeApp( environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     SignupPageModule,
     AddPageModule,
     FolderDetailPageModule
