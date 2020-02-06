@@ -22,6 +22,10 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
+//google maps
+import { Geolocation } from '@ionic-native/geolocation/ngx'
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -42,7 +46,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Camera
+    Camera,
+    Geolocation
   ],
   bootstrap: [AppComponent]
 })

@@ -33,6 +33,12 @@ export class AppComponent {
       title: 'Import Images',
       url: '/import',
       icon: 'cloud-upload'
+    },
+
+    {
+      title: 'Google Maps',
+      url: '/home',
+      icon: 'navigate'
     }
 
   ];
@@ -61,7 +67,8 @@ export class AppComponent {
       if( user ) {
         this.appPages = [
           {title: 'Folders', url: '/folders', icon: 'folder-open'},
-          {title: 'Import Images', url: '/import', icon: 'cloud-upload'}
+          {title: 'Import Images', url: '/import', icon: 'cloud-upload'},
+          {title: 'Google Maps', url: '/home', icon: 'navigate'}
           /*{title: 'Settings', url: '/settings ', icon: 'settings'}*/
       ]
       this.user = user;
