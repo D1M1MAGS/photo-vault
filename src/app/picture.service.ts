@@ -4,6 +4,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { DataService } from '../app/data.service';
 import { Platform } from '@ionic/angular';
+//import { Storage } from '@ionic/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,8 @@ export class PictureService {
     private afStorage: AngularFireStorage,
     private dataService: DataService,
     private camera: Camera,
-    private platform: Platform
+    private platform: Platform,
+    private storage: Storage
   ) { }
 
   takePicture() {

@@ -27,7 +27,14 @@ export class AppComponent {
       title: 'Folders',
       url: '/folders',
       icon: 'folder-open'
+    },
+
+    {
+      title: 'Import Images',
+      url: '/import',
+      icon: 'cloud-upload'
     }
+
   ];
 
   user:any;
@@ -53,7 +60,8 @@ export class AppComponent {
     this.afAuth.authState.subscribe((user)=> {
       if( user ) {
         this.appPages = [
-          {title: 'Folders', url: '/folders', icon: 'folder-open'}
+          {title: 'Folders', url: '/folders', icon: 'folder-open'},
+          {title: 'Import Images', url: '/import', icon: 'cloud-upload'}
           /*{title: 'Settings', url: '/settings ', icon: 'settings'}*/
       ]
       this.user = user;

@@ -16,6 +16,7 @@ import { environment } from '../environments/environment';
 import { SignupPageModule } from './signup/signup.module';
 import { AddPageModule } from './add/add.module';
 import { FolderDetailPageModule } from './folder-detail/folder-detail.module';
+import { IonicStorageModule } from '@ionic/storage';
 
 // camera 
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
@@ -26,6 +27,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
   entryComponents: [],
   imports: [
     BrowserModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp( environment.firebase),

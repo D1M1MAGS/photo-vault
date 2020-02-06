@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'folder-detail',
     loadChildren: () => import('./folder-detail/folder-detail.module').then( m => m.FolderDetailPageModule)
+  },
+  {
+    path: 'import',
+    loadChildren: () => import('./import/import.module').then( m => m.ImportPageModule)
   }
 ];
 
