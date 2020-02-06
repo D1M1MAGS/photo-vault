@@ -4,24 +4,14 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Test
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+<ion-content padding>
+  <button ion-button (click)="takePhoto()" full color = "primary"> Take Photo </button>
+  <button ion-button (click)="getPhoto()" full color = "secondary"> Get Photo from Library </button>
+  <button ion-button (click)="cropPhoto()" full color = "danger"> Crop Photo </button>
+
 </ion-content>

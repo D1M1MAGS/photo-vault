@@ -25,8 +25,7 @@ export class PictureService {
     private afStorage: AngularFireStorage,
     private dataService: DataService,
     private camera: Camera,
-    private platform: Platform,
-    private storage: Storage
+    private platform: Platform
   ) { }
 
   takePicture() {
