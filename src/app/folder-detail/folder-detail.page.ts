@@ -82,12 +82,4 @@ export class FolderDetailPage implements OnInit {
     this.picture.takePicture();
   }
 
-  takePicture(){
-
-  }
-
-  getPicture(){
-    
-  }
-
 }
