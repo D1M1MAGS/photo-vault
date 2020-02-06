@@ -28,11 +28,13 @@ export class ImportPage implements OnInit {
     };
 
     this.camera.getPicture(options).then((imageData) => {
-      this.currentImage = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => {
+      // Add new photo to gallery
+      this.photoService.photos.unshift({
+          data: 'data:image/jpeg;base64,' + imageData
+      }); }, (err) => {
       // Handle error
-      console.log("Camera issue:" + err);
-    });
+      console.log("Camera issue: " + err);
+  });
   }
 
   getPicture() {
@@ -44,11 +46,13 @@ export class ImportPage implements OnInit {
     };
 
     this.camera.getPicture(options).then((imageData) => {
-      this.currentImage = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => {
+      // Add new photo to gallery
+      this.photoService.photos.unshift({
+          data: 'data:image/jpeg;base64,' + imageData
+      }); }, (err) => {
       // Handle error
-      console.log("Camera issue:" + err);
-    });
+      console.log("Camera issue: " + err);
+  });
   }
 
 }

@@ -8,6 +8,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 export class PhotoService {
 
   public photos: Photo[] = [];
+  dataService: any;
+  afStorage: any;
 
   constructor(private camera: Camera, private storage: Storage) { }
 
@@ -38,6 +40,13 @@ export class PhotoService {
     this.storage.get('photos').then((photos) => {
       this.photos = photos || [];
     });
+  }
+
+  uploadImage( data ) {
+    console.log( this.dataService.getUid() );
+    const file = data;
+    const filePath = 'name-your-file-path-here';
+    const task = this.afStorage.upload(filePath, file);
   }
   
 }
