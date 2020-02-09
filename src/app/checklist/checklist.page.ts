@@ -28,7 +28,7 @@ export class ChecklistPage implements OnInit {
   
   ngOnInit() {
     this.taskForm = this.formBuilder.group({
-     taskName: ['', [Validators.required, Validators.minLength(3) ] ] 
+     taskName: ['', [Validators.required, Validators.minLength(1) ] ] 
     });
     this.historySub = this.checklistService.list$.subscribe( taskData => this.history = taskData );
   }
