@@ -45,6 +45,12 @@ export class AppComponent {
       title: 'Discovery Checklist',
       url: '/checklist',
       icon: 'list'
+    },
+
+    {
+      title: 'Test Map',
+      url: '/list',
+      icon: 'map'
     }
 
   ];
@@ -75,7 +81,8 @@ export class AppComponent {
           {title: 'Folders', url: '/folders', icon: 'folder-open'},
           {title: 'Quick Add / Import', url: '/import', icon: 'cloud-upload'},
           {title: 'Discover / Google Maps', url: '/home', icon: 'navigate'},
-          {title: 'Discovery Checklist', url: '/checklist', icon: 'list'}
+          {title: 'Discovery Checklist', url: '/checklist', icon: 'list'},
+          {title: 'Test Map', url: '/list', icon: 'map'}
           /*{title: 'Settings', url: '/settings ', icon: 'settings'}*/
       ]
       this.user = user;

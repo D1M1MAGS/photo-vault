@@ -28,6 +28,7 @@ export class HomePage {
       this.map = new google.maps.Map(document.getElementById("map"),mapOptions);
       this.Getlocation();
     });
+
   }
     
     Getlocation(){
@@ -51,6 +52,10 @@ export class HomePage {
         ref.longitude = position.coords.longitude.toString();
         ref.timestamp = (new Date(position.timestamp)).toString();
       });
+    }
+
+    refresh(){
+        this.Getlocation();
     }
   }
 

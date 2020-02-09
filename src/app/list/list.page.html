@@ -1,17 +1,14 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color = "primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Test
+        GPS Tracking
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="takePhoto()" full color = "primary"> Take Photo </button>
-  <button ion-button (click)="getPhoto()" full color = "secondary"> Get Photo from Library </button>
-  <button ion-button (click)="cropPhoto()" full color = "danger"> Crop Photo </button>
-
+  <div #map id = "map"> </div>
 </ion-content>
