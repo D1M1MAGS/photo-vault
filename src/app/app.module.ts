@@ -24,6 +24,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 
 //google maps
 import { Geolocation } from '@ionic-native/geolocation/ngx'
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { Geolocation } from '@ionic-native/geolocation/ngx'
     AngularFireStorageModule,
     SignupPageModule,
     AddPageModule,
-    FolderDetailPageModule
+    FolderDetailPageModule,
+    ReactiveFormsModule
   ],
   providers: [
     StatusBar,
