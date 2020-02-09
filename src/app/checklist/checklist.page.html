@@ -15,7 +15,7 @@
     <ion-list>
     <ion-list-header> Add to your list of discovered areas </ion-list-header>
       <ion-item>
-        <ion-input name = "taskName" placeholder = "Enter a task" type = "text" formControlName="taskName"></ion-input>
+        <ion-input name = "taskName" placeholder = "Enter an area" type = "text" formControlName="taskName"></ion-input>
       </ion-item>
 
       <ion-button expand = "full" class="ion-margin" *ngIf="!started" (click)="addTask()" [disabled] = "!taskForm.valid" > Add </ion-button>

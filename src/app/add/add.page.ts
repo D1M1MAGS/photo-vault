@@ -40,6 +40,9 @@ export class AddPage implements OnInit {
 
   takePhoto(){
     this.picture.takePicture();
+    this.picture.downloadURL.subscribe( (url) => {
+      console.log(url)
+    })
   }
 
 }
